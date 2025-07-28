@@ -20,4 +20,3 @@ models/*
 # Environment files
 .env
 .DS_Store.DS_Store
-image.png
