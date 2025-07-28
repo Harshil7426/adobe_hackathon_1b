@@ -10,8 +10,8 @@ COPY requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
 
 # Download and install spaCy models
-RUN python -m spacy download en_core_web_sm && \
-    python -m spacy download en_core_web_md
+RUN python -m spacy download en_core_web_md
+
 
 # Copy local models if your code uses them
 COPY local_models/ ./local_models/
