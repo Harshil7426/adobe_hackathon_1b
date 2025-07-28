@@ -79,8 +79,8 @@ We parse PDF files using **PyMuPDF** (`fitz`) and rebuild a logical hierarchy:
 
 ---
 
-## Flow of the code:
-'''
+## 🔄 Flow of the Code
+'''text
             ┌────────────┐
             │ Persona &  │
             │ Task Input │
@@ -108,6 +108,7 @@ We parse PDF files using **PyMuPDF** (`fitz`) and rebuild a logical hierarchy:
                              │ Bi-Encoder │
                              └────────────┘
 
+---
 
 ## 🧩 Tech Stack Used
 
