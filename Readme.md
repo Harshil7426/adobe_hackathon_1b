@@ -114,7 +114,8 @@ The system outputs structured JSON like:
   "metadata": {
     "input_documents": ["list"],
     "persona": "User Persona",
-    "job_to_be_done": "Task description"
+    "job_to_be_done": "Task description",
+    "processing_timestamp": "timestamp"
   },
   "extracted_sections": [
     {
