@@ -80,7 +80,7 @@ We parse PDF files using **PyMuPDF** (`fitz`) and rebuild a logical hierarchy:
 ---
 
 ## 🔄 Flow of the Code
-![Architecture](.repo_assets/image.png)
+![Flow](.github/assets/image.png)
 ---
 
 ## 🧩 Tech Stack Used
