@@ -1,8 +1,6 @@
 PyMuPDF==1.26.3
-# NLP and Vectorization
 spacy==3.8.7
 scikit-learn==1.7.1
 numpy==2.2.6
-# Semantic Search
 sentence-transformers==2.7.0
 torch==2.7.1
