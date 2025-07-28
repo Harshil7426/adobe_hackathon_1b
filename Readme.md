@@ -60,7 +60,7 @@ We parse PDF files using **PyMuPDF** (`fitz`) and rebuild a logical hierarchy:
 ### 3.1 Section Ranking via Cross-Encoder
 - From each document, we extract the top 5 structurally significant sections (by heading font size and page location).
 - These are then reranked using a **CrossEncoder**:  
-  `cross-encoder/ms-marco-MiniLM-L-6-v2` from **HuggingFace**.
+  `cross-encoder/ms-marco-MiniLM-L-6-v2`
 - It compares each section title to the query for relevance.
 
 > **Function**:  
@@ -111,19 +111,24 @@ The system outputs structured JSON like:
 
 ```json
 {
-  "persona": "Compliance Officer",
-  "task": "Identify regulatory risks",
-  "relevant_sections": [
+  "metadata": {
+    "input_documents": ["list"],
+    "persona": "User Persona",
+    "job_to_be_done": "Task description"
+  },
+  "extracted_sections": [
     {
-      "title": "2.3 Data Governance",
-      "score": 0.93
-    },
-    ...
+      "document": "source.pdf",
+      "section_title": "Title",
+      "importance_rank": 1,
+      "page_number": 1
+    }
   ],
-  "relevant_subsections": [
+  "subsection_analysis": [
     {
-      "text": "All data transfers must comply with GDPR...",
-      "score": 0.89
+      "document": "source.pdf",
+      "refined_text": "Content",
+      "page_number": 1
     }
   ]
 }
