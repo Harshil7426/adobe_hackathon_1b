@@ -124,7 +124,7 @@ class PDFProcessor:
         extracted_content = []
         current_subsection_text = []
         current_heading_info = None
-        for page_num, page in enumerate(doc, 1):
+        for page_num, page in enumerate(doc, 0):
             blocks = sorted(page.get_text("dict").get("blocks", []), key=lambda b: b['bbox'][1])
             for block in blocks:
                 if block.get("type") != 0 or not block.get("lines"): continue
@@ -207,7 +207,7 @@ class PDFProcessor:
 
 def main():
     os.environ["TOKENIZERS_PARALLELISM"] = "false"
-    input_json_path = Path("input_json/challenge1b_input.json")
+    input_json_path = Path("input/challenge1b_input.json")
     pdf_dir = Path("input")
     output_path = Path("output/challenge1b_output.json")
     try:
